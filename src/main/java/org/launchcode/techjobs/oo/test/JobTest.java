@@ -107,11 +107,11 @@ public class JobTest {
 
     @Test
     public void dataNotAvailableTests() {
-        assertTrue(testJob6.toString().contains("Name Data Not Available"));
-        assertTrue(testJob7.toString().contains("Employer Data Not Available"));
-        assertTrue(testJob8.toString().contains("Location Data Not Available"));
-        assertTrue(testJob9.toString().contains("Position Type Data Not Available"));
-        assertTrue(testJob10.toString().contains("Core Competency Data Not Available"));
+        assertTrue(testJob6.toString().contains("Data not available"));
+        assertTrue(testJob7.toString().contains("Data not available"));
+        assertTrue(testJob8.toString().contains("Data not available"));
+        assertTrue(testJob9.toString().contains("Data not available"));
+        assertTrue(testJob10.toString().contains("Data not available"));
     }
 
 
