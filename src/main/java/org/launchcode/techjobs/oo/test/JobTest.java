@@ -62,7 +62,7 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
-        assertTrue( testJob3.getName() instanceof String);
+        assertTrue(testJob3.getName() instanceof String);
         assertTrue(testJob3.getEmployer() instanceof Employer);
         assertTrue(testJob3.getLocation() instanceof Location);
         assertTrue(testJob3.getPositionType() instanceof PositionType);
@@ -112,6 +112,10 @@ public class JobTest {
         assertTrue(testJob8.toString().contains("Data not available"));
         assertTrue(testJob9.toString().contains("Data not available"));
         assertTrue(testJob10.toString().contains("Data not available"));
+//        System.out.println(testJob8.toString());
+//        System.out.println(testJob7.toString());
+//        System.out.println(testJob9.toString());
+//        System.out.println(testJob10.toString());
     }
 
 
