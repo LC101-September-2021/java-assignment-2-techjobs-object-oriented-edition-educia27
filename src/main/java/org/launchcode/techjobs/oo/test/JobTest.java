@@ -95,7 +95,7 @@ public class JobTest {
     }
 
     @Test
-    public void startsAndEndsWithABlankLine() {
+    public void testToStringStartsAndEndsWithNewLine() {
         testJob3 = new Job("Product tester",
                 new Employer("ACME"),
                 new Location("Desert"),
