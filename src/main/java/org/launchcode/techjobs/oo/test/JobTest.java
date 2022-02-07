@@ -24,31 +24,33 @@ public class JobTest {
     Job testJob8;
     Job testJob9;
     Job testJob10;
-    Job test11;
+//    Job test11;
 
 
-    @Before
-    public void initiatingJobs(){
-        testJob = new Job();
-        testJob2 = new Job();
-        testJob3 = new Job("Product tester",
-                new Employer("ACME"),
-                new Location("Desert"),
-                new PositionType("Quality control"),
-                new CoreCompetency("Persistence"));
-
-        testJob4 = new Job ("Momento", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Ruby"));
-        testJob5 = new Job ("Alias", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Kotlin"));
-        testJob6 = new Job ("", new Employer("WeLink"), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("Python"));
-        testJob7 = new Job ("Eddy", new Employer(""), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("JavaScript"));
-        testJob8 = new Job ("Foxtrot", new Employer("Google"), new Location(""), new PositionType("Analyst"), new CoreCompetency("Rust"));
-        testJob9 = new Job ("Tony", new Employer("Facebook"), new Location("Ivory Coast"), new PositionType(""), new CoreCompetency("GoLang"));
-        testJob10 = new Job ("Mike", new Employer("Amazon"), new Location("California"), new PositionType("Data Architect"), new CoreCompetency(""));
-        test11 = new Job();
-    }
+//    @Before
+//    public void initiatingJobs(){
+//        testJob = new Job();
+//        testJob2 = new Job();
+//        testJob3 = new Job("Product tester",
+//                new Employer("ACME"),
+//                new Location("Desert"),
+//                new PositionType("Quality control"),
+//                new CoreCompetency("Persistence"));
+//
+//        testJob4 = new Job ("Momento", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Ruby"));
+//        testJob5 = new Job ("Alias", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Kotlin"));
+//        testJob6 = new Job ("", new Employer("WeLink"), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("Python"));
+//        testJob7 = new Job ("Eddy", new Employer(""), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("JavaScript"));
+//        testJob8 = new Job ("Foxtrot", new Employer("Google"), new Location(""), new PositionType("Analyst"), new CoreCompetency("Rust"));
+//        testJob9 = new Job ("Tony", new Employer("Facebook"), new Location("Ivory Coast"), new PositionType(""), new CoreCompetency("GoLang"));
+//        testJob10 = new Job ("Mike", new Employer("Amazon"), new Location("California"), new PositionType("Data Architect"), new CoreCompetency(""));
+//        test11 = new Job();
+//    }
 
     @Test
     public void testSettingJobId() {
+        testJob = new Job();
+        testJob2 = new Job();
         assertEquals(testJob.getId() + 1, testJob2.getId());
         assertTrue(testJob2.getId() > testJob.getId());
         assertFalse(testJob.getId() > testJob2.getId());
@@ -62,6 +64,11 @@ public class JobTest {
 
     @Test
     public void testJobConstructorSetsAllFields() {
+        testJob3 = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
         assertTrue(testJob3.getName() instanceof String);
         assertTrue(testJob3.getEmployer() instanceof Employer);
         assertTrue(testJob3.getLocation() instanceof Location);
@@ -78,6 +85,8 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality() {
+        testJob4 = new Job ("Momento", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Ruby"));
+        testJob5 = new Job ("Alias", new Employer("Harris"), new Location("Hawaii"), new PositionType("Analyst"), new CoreCompetency("Kotlin"));
         boolean check = testJob4.equals(testJob5);
         assertFalse(check);
 //        System.out.println("ID of testJob4 is: " + testJob4.getId());
@@ -87,6 +96,12 @@ public class JobTest {
 
     @Test
     public void startsAndEndsWithABlankLine() {
+        testJob3 = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+
         assertEquals('\n', testJob3.toString().charAt(0));
         assertEquals('\n', testJob3.toString().charAt(testJob3.toString().length() - 1));
         //retrieving last character of string is always index  - 1
@@ -96,6 +111,11 @@ public class JobTest {
 
     @Test
     public void hasLabelsForEachField() {
+        testJob3 = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
         assertEquals("\nID : " + testJob3.getId() +
                 "\nName : " + testJob3.getName() +
                 "\nEmployer : " + testJob3.getEmployer() +
@@ -107,6 +127,11 @@ public class JobTest {
 
     @Test
     public void dataNotAvailableTests() {
+        testJob6 = new Job ("", new Employer("WeLink"), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("Python"));
+        testJob7 = new Job ("Eddy", new Employer(""), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("JavaScript"));
+        testJob8 = new Job ("Foxtrot", new Employer("Google"), new Location(""), new PositionType("Analyst"), new CoreCompetency("Rust"));
+        testJob9 = new Job ("Tony", new Employer("Facebook"), new Location("Ivory Coast"), new PositionType(""), new CoreCompetency("GoLang"));
+        testJob10 = new Job ("Mike", new Employer("Amazon"), new Location("California"), new PositionType("Data Architect"), new CoreCompetency(""));
         assertTrue(testJob6.toString().contains("Data not available"));
         assertTrue(testJob7.toString().contains("Data not available"));
         assertTrue(testJob8.toString().contains("Data not available"));
