@@ -59,12 +59,12 @@ public class Job {
             coreCompetencyData = "Data not available";
         }
 
-        data = "\nID : " + getId() +
-                "\nName : " + nameData +
-                "\nEmployer : " + employerData +
-                "\nLocation : " + locationData +
-                "\nPosition Type : " + positionTypeData +
-                "\nCore Competency : " + coreCompetencyData + "\n";
+        data = "\nID: " + getId() +
+                "\nName: " + nameData +
+                "\nEmployer: " + employerData +
+                "\nLocation: " + locationData +
+                "\nPosition Type: " + positionTypeData +
+                "\nCore Competency: " + coreCompetencyData + "\n";
 
         return data;
     }
