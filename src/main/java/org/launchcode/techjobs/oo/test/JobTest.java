@@ -126,7 +126,7 @@ public class JobTest {
     }
 
     @Test
-    public void dataNotAvailableTests() {
+    public void testToStringHandlesEmptyField() {
         testJob6 = new Job ("", new Employer("WeLink"), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("Python"));
         testJob7 = new Job ("Eddy", new Employer(""), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("JavaScript"));
         testJob8 = new Job ("Foxtrot", new Employer("Google"), new Location(""), new PositionType("Analyst"), new CoreCompetency("Rust"));
