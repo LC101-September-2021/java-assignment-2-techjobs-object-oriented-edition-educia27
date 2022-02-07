@@ -105,17 +105,6 @@ public class JobTest {
         assertEquals('\n', testJob3.toString().charAt(0));
         assertEquals('\n', testJob3.toString().charAt(testJob3.toString().length() - 1));
         //retrieving last character of string is always index  - 1
-
-
-    }
-
-    @Test
-    public void hasLabelsForEachField() {
-        testJob3 = new Job("Product tester",
-                new Employer("ACME"),
-                new Location("Desert"),
-                new PositionType("Quality control"),
-                new CoreCompetency("Persistence"));
         assertEquals("\nID : " + testJob3.getId() +
                 "\nName : " + testJob3.getName() +
                 "\nEmployer : " + testJob3.getEmployer() +
@@ -124,6 +113,22 @@ public class JobTest {
                 "\nCore Competency : " + testJob3.getCoreCompetency() + "\n", testJob3.toString());
 
     }
+
+//    @Test
+//    public void hasLabelsForEachField() {
+//        testJob3 = new Job("Product tester",
+//                new Employer("ACME"),
+//                new Location("Desert"),
+//                new PositionType("Quality control"),
+//                new CoreCompetency("Persistence"));
+//        assertEquals("\nID : " + testJob3.getId() +
+//                "\nName : " + testJob3.getName() +
+//                "\nEmployer : " + testJob3.getEmployer() +
+//                "\nLocation : " + testJob3.getLocation() +
+//                "\nPosition Type : " + testJob3.getPositionType() +
+//                "\nCore Competency : " + testJob3.getCoreCompetency() + "\n", testJob3.toString());
+//
+//    }
 
     @Test
     public void testToStringHandlesEmptyField() {
