@@ -43,19 +43,19 @@ public class Job {
         String positionTypeData = this.getPositionType().toString();
         String coreCompetencyData = this.getCoreCompetency().toString();
 
-        if (nameData == null) {
+        if (nameData == "") {
             nameData = "Data not available";
         }
-        if (employerData == null) {
+        if (employerData == "") {
             employerData = "Data not available";
         }
-        if (locationData == null) {
+        if (locationData == "") {
             locationData = "Data not available";
         }
-        if (positionTypeData == null) {
+        if (positionTypeData == "") {
             positionTypeData = "Data not available";
         }
-        if (coreCompetencyData == null) {
+        if (coreCompetencyData == "") {
             coreCompetencyData = "Data not available";
         }
 
