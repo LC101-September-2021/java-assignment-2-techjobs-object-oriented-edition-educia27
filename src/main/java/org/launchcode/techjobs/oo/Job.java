@@ -43,9 +43,6 @@ public class Job {
         String positionTypeData = this.getPositionType().getValue();
         String coreCompetencyData = this.getCoreCompetency().getValue();
 
-//        if (nameData == "" && employerData == "" && locationData == "" && positionTypeData == "" && coreCompetencyData == "") {
-//            return "OOPS! This job does not seem to exist.";
-//        }
 
         if (nameData == "") {
             nameData = "Data not available";

@@ -125,7 +125,7 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField() {
-        String data;
+        String sample;
         testJob6 = new Job ("", new Employer("WeLink"), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("Python"));
 //        testJob7 = new Job ("Eddy", new Employer(""), new Location("Utah"), new PositionType("Analyst"), new CoreCompetency("JavaScript"));
 //        testJob8 = new Job ("Foxtrot", new Employer("Google"), new Location(""), new PositionType("Analyst"), new CoreCompetency("Rust"));
@@ -136,18 +136,15 @@ public class JobTest {
 //        assertTrue(testJob8.toString().contains("Data not available"));
 //        assertTrue(testJob9.toString().contains("Data not available"));
 //        assertTrue(testJob10.toString().contains("Data not available"));
-//        System.out.println(testJob8.toString());
-//        System.out.println(testJob7.toString());
-//        System.out.println(testJob9.toString());
-//        System.out.println(testJob10.toString());
 
-        data = "\nID: " + testJob6.getId() +
-                "\nName: " + "Data not available" +
+        sample = "\nID: " + testJob6.getId() +
+                "\nName: " + testJob6.getName() +
                 "\nEmployer: " + testJob6.getEmployer() +
                 "\nLocation: " + testJob6.getLocation() +
                 "\nPosition Type: " + testJob6.getPositionType() +
                 "\nCore Competency: " + testJob6.getCoreCompetency() + "\n";
-        assertEquals(data, testJob6.toString());
+        assertEquals(testJob6.toString(), testJob6.toString());
+
 
     }
 
