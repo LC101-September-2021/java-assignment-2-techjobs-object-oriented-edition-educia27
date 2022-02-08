@@ -138,12 +138,12 @@ public class JobTest {
 //        assertTrue(testJob10.toString().contains("Data not available"));
 
         sample = "\nID: " + testJob6.getId() +
-                "\nName: " + testJob6.getName() +
+                "\nName: " + "Data not available" + //testJob6.getName()
                 "\nEmployer: " + testJob6.getEmployer() +
                 "\nLocation: " + testJob6.getLocation() +
                 "\nPosition Type: " + testJob6.getPositionType() +
                 "\nCore Competency: " + testJob6.getCoreCompetency() + "\n";
-        assertEquals(testJob6.toString(), testJob6.toString());
+        assertEquals(sample, testJob6.toString());
 
 
     }

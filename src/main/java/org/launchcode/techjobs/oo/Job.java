@@ -44,8 +44,9 @@ public class Job {
         String coreCompetencyData = this.getCoreCompetency().getValue();
 
 
-        if (nameData == "") {
+        if (nameData.equals("")) {
             nameData = "Data not available";
+            System.out.println("running");
         }
         if (employerData == "") {
             employerData = "Data not available";
@@ -59,6 +60,7 @@ public class Job {
         if (coreCompetencyData == "") {
             coreCompetencyData = "Data not available";
         }
+
 
         data = "\nID: " + getId() +
                 "\nName: " + nameData +
