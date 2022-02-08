@@ -38,15 +38,14 @@ public class Job {
     public String toString() {
         String data;
         String nameData = this.name; //already declared as string
-        String employerData = this.getEmployer().getValue(); // must be converted to strings since deriving from object
+        String employerData = this.getEmployer().getValue(); // retrieving data from employer object via getValue
         String locationData = this.getLocation().getValue();
         String positionTypeData = this.getPositionType().getValue();
         String coreCompetencyData = this.getCoreCompetency().getValue();
 
 
-        if (nameData.equals("")) {
+        if (nameData == "") {
             nameData = "Data not available";
-            System.out.println("running");
         }
         if (employerData == "") {
             employerData = "Data not available";
