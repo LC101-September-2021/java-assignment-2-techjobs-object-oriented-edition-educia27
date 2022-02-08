@@ -37,7 +37,7 @@ public class Job {
     @Override
     public String toString() {
         String data;
-        String nameData = this.name;  //already declared as string
+        String nameData = this.name; //already declared as string
         String employerData = this.getEmployer().getValue(); // must be converted to strings since deriving from object
         String locationData = this.getLocation().getValue();
         String positionTypeData = this.getPositionType().getValue();
